@@ -2,7 +2,9 @@ body {
     margin: 0px;
     font-family: Arial, sans-serif;
   }
- 
+ footer div{
+  padding: 0px;
+ }
   .navbar {
     display: flex;
     justify-content: space-between;
@@ -17,7 +19,7 @@ body {
   }
   
   .logo {
-    height: 100px;
+    height: 150px;
     display: flex;
     
   }
@@ -135,17 +137,19 @@ body {
         flex-wrap: wrap;
         gap: 20px;
         justify-content: center;
+        grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
       }
       
       .card {
-        background: #f9f9f9;
+        background: rgb(243, 241, 241);
         border-radius: 12px;
-        padding: 20px;
+        padding: 10px;
         flex: 1 1 300px;
-        max-width: 360px;
-        box-shadow: 0 4px 12px rgba(0,0,0,0.05);
+        max-width: 300px;
+        box-shadow: 0 4px 12px rgba(245, 239, 239, 0.05);
         text-align: left;
         transition: transform 0.3s ease;
+        justify-content: space-between;
       }
       
       .card:hover {
@@ -176,15 +180,20 @@ body {
         font-size: 0.95rem;
         color: #333;
       }
+      @media (max-width: 768px) {
+        .services-grid {
+          grid-template-columns: 1fr;
+        }
+      }
       
-      /* Responsive */
+      /* Responsive 
       @media (max-width: 768px) {
         .services-grid {
           flex-direction: column;
           align-items: center;
         }
       }
-  
+  */
   
   .contact-item {
     display: flex;
@@ -214,15 +223,15 @@ body {
   footer {
     height: auto;
     background-color: #e0e0e0;
-    padding: 50px;
-    min-height: auto;
+    padding: 40px;
+    min-height: 50px;
 }
 
 .footer-container {
     display: flex;
     justify-content: space-around; /* розміщення по краях */
     flex-wrap: wrap;
-    gap: 20px;
+    gap: 10px;
     margin-top: auto;
     
 }
@@ -306,7 +315,11 @@ body {
     margin: auto;
     border-radius: 8px;
   }
-  
+  a {
+    text-decoration: none;
+    color: black; /* Убирает подчёркивание */
+  }
+
   button {
     transition: transform 0.1s ease, box-shadow 0.1s ease;
     cursor: pointer;
@@ -349,7 +362,7 @@ body {
     background: white;
     padding: 30px;
     border-radius: 12px;
-    box-shadow: 0 0 20px rgba(0,0,0,0.1);
+    box-shadow: 0 0 20px rgba(252, 243, 243, 0.1);
   }
   
   .contact-container h2 {
@@ -375,7 +388,7 @@ body {
   }
   
   .contact-form button {
-    background-color: #007BFF;
+    background-color:#00c4cc;
     color: white;
     border: none;
     padding: 12px 20px;
@@ -437,15 +450,16 @@ body {
   @media (max-width: 768px) {
     .footer-container {
         flex-direction: column;
-        align-items: center;
+        align-items: left;
+        margin-left: 120px;
     }
 
     .footer-column {
-        align-items: center;
-        text-align: center;
+        align-items: left;
+        text-align: left;
     }
 
     .contact-item {
-        justify-content: center;
+        justify-content: left;
     }
 }
