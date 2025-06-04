@@ -1,7 +1,22 @@
-body {
+/* body {
     margin: 0px;
     font-family: Arial, sans-serif;
-  }
+  } */
+  html, body {
+    height: 100%;
+    margin: 0;
+    padding: 0;
+    font-family: Arial, sans-serif;
+}
+
+body {
+    display: flex;
+    flex-direction: column;
+}
+
+.content {
+    flex: 1; /* штовхає футер вниз */
+}
  footer div{
   padding: 0px;
  }
@@ -219,8 +234,7 @@ body {
     
   
   } */
-  
-  footer {
+  /* footer {
     height: auto;
     background-color: #e0e0e0;
     padding: 40px;
@@ -229,7 +243,7 @@ body {
 
 .footer-container {
     display: flex;
-    justify-content: space-around; /* розміщення по краях */
+    justify-content: space-around;  розміщення по краях 
     flex-wrap: wrap;
     gap: 10px;
     margin-top: auto;
@@ -242,7 +256,8 @@ body {
     text-align: left;
     flex: 1;
     min-width: 250px;
-}
+} */
+  
 .footer-column p{
   color: gray;
 }
@@ -447,7 +462,7 @@ body {
       height: auto;
     }
   }
-  @media (max-width: 768px) {
+  /* @media (max-width: 768px) {
     .footer-container {
         flex-direction: column;
         align-items: left;
@@ -462,4 +477,85 @@ body {
     .contact-item {
         justify-content: left;
     }
+        footer {
+  height: auto;
+  background-color: #e0e0e0;
+  padding: 40px;
+  min-height: 100px;
+}
+} */
+  
+
+footer {
+  background-color: #e0e0e0;
+  padding: 40px;
+  width: 100%;
+  box-sizing: border-box; /* Важливо, щоб padding не вилазив */
+}
+
+.footer-container {
+  display: flex;
+  justify-content: space-around;
+  flex-wrap: wrap;
+  gap: 10px;
+}
+
+.footer-column {
+  display: flex;
+  flex-direction: column;
+  text-align: left;
+  flex: 1;
+  min-width: 250px;
+}
+
+@media (max-width: 768px) {
+  .footer-container {
+      flex-direction: column;
+      align-items: flex-start;
+      padding-left: 20px; /* замість margin-left: 90px */
+  }
+
+  .footer-column {
+      align-items: flex-start;
+      text-align: left;
+  }
+
+  .contact-item {
+      justify-content: flex-start;
+  }
+}
+.privacy-content {
+  max-width: 900px;
+  margin: 20px auto;
+  padding: 20px;
+  background-color: white;
+  border-radius: 8px;
+  box-shadow: 0 0 10px rgba(0,0,0,0.1);
+}
+.policy-container {
+  max-width: 900px;
+  margin: auto;
+  background-color: white;
+  padding: 30px;
+  border-radius: 8px;
+  box-shadow: 0 2px 10px rgba(0,0,0,0.1);
+}
+.subpoint p {
+  margin-bottom: 16px;
+  line-height: 1.6;
+}
+
+.highlight {
+  color: darkred;
+  font-weight: bold;
+}
+
+.highlight-yellow {
+  background-color: yellow;
+  font-weight: bold;
+}
+
+p a{
+  text-decoration:underline;
+  color: blue;
 }
